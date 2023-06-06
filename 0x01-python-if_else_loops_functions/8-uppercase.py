@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 def uppercase(str):
     for char in str:
-        if isalpha(char):
+        if char.isalpha():
             if 65 <= ord(char) <= 90:
-                print(char, end="")
+            	pass
             else:
-                print("{:c}".format(ord(char) - 97 + 65))
+            	char = "{:c}".format(ord(char) - 97 + 65)
+        print(char, end="")
+    print()

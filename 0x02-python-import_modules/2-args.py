@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import sys
+
+
 def main():
     arg_len = len(sys.argv)
     if arg_len == 1:
@@ -12,5 +14,7 @@ def main():
     while i < arg_len:
         print("{}:".format(i), sys.argv[i])
         i += 1
+
+
 if __name__ == "__main__":
     main()

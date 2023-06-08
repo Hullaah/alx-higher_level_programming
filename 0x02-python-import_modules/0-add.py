@@ -5,7 +5,7 @@ b = 2
 
 
 def main():
-    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
 
 
 if __name__ == "__main__":

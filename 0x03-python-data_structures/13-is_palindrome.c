@@ -77,6 +77,8 @@ int is_palindrome(listint_t **head)
 {
 	int node_length = list_length(*head), half_length, last_idx;
 
+	if (!*head)
+		return (1);
 	last_idx = node_length - 1;
 	half_length = node_length % 2 ? node_length / 2 : node_length / 2 - 1;
 

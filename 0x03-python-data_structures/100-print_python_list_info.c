@@ -1,4 +1,4 @@
-#include <python3.10/Python.h>
+#include <Python.h>
 void print_python_list_info(PyObject *p)
 {
         Py_ssize_t list_size, i;

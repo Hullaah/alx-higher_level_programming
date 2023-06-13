@@ -1,4 +1,4 @@
-#include <python3.4/Python.h>
+#include <python3.10/Python.h>
 void print_python_list_info(PyObject *p)
 {
         Py_ssize_t list_size, i;
@@ -6,7 +6,7 @@ void print_python_list_info(PyObject *p)
         Py_ssize_t allocated;
 
         list_size = PyList_Size(p);
-        allocated = Py_SIZE(p);
+        allocated = ((PyListObject *)p)->allocated;
         printf("[*] Size of the Python List = %ld\n", list_size);
         printf("[*] Allocated = %ld\n", allocated);
         for (i = 0; i < list_size; i++)

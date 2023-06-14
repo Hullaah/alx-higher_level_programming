@@ -12,8 +12,6 @@ def search_replace(my_list, search, replace):
     exist = search in copy
     while exist:
         index = find(copy, search)
-        if index:
-            copy[index] = replace
-        else:
-            break
+        copy[index] = replace
+        exist = search in copy
     return copy

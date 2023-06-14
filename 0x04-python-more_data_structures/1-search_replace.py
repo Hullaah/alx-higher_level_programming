@@ -9,8 +9,6 @@ def find(my_list, x):
 
 def search_replace(my_list, search, replace):
     copy = my_list[:]
-    if not copy:
-        return
     exist = search in copy
     while exist:
         index = find(copy, search)

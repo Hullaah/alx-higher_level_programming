@@ -28,7 +28,7 @@ void print_python_bytes(PyObject *p)
 	else
 	{
 		Py_ssize_t bytes_size = PyBytes_Size(p);
-		char *byte_string = PyBytes_AS_STRING(p);
+		char *byte_string = ((PyBytesObject*)p)->ob_sval;
 		printf("  size: %ld\n", bytes_size);
 		printf("  trying string: %s\n", byte_string);
 		loop = (bytes_size > 10) ? 10 : bytes_size + 1;

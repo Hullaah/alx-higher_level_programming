@@ -3,9 +3,12 @@
 """Singly linked list
 This module is part of the project done during the alx SE course.
 This module demonstrates the imnplementation of a singly linked
-list nodenext_node must be a Node object and a singly linked list from the implemented node.
+list nodenext_node must be a Node object and a singly linked list
+from the implemented node.
 
 """
+
+
 class Node:
     """It is a node class object
 
@@ -22,7 +25,7 @@ class Node:
         """
         if type(data) is not int:
             raise TypeError("data must be an integer")
-        if type(next_node) is not Node next_node != None:
+        if type(next_node) is not Node and next_node is not None:
             raise TypeError("next_node must be a Node object")
         self.__data = data
         self.__next_node = next_node
@@ -51,9 +54,11 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if type(next_node) is not Node or next_node != None:
+        if type(next_node) is not Node and next_node is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
+
+
 class SinglyLinkedList:
     """This is a singlyLinkedlist class object.
 
@@ -67,22 +72,47 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        self.__head = Node(value, self.__head)
+        ptr = self.__head
+        i = 0
+        while ptr:
+            i += 1
+            if ptr.data >= value:
+                break
+            ptr = ptr.next_node
+        insert_node_at_index(ptr, i, value)
+
+    def __str__(self) -> str:
+        ret = ""
+        ptr = self.__head
+        while ptr:
+            ret += str(ptr) + "\n"
+            ptr = ptr.next_node
+        ret = ret[:-1]
+        return ret
 
 
 def insert_node_at_index(node: Node, index: int, value: int) -> None:
     i = 0
-    ptr = node
+    preptr = ptr = node
     length = list_length(node)
+    if node is None:
+        node = Node(value, node)
+        return
     if i >= length or i < 0:
-        return None    
+        return
     while i != index:
         i += 1
+        preptr = ptr
         ptr = ptr.next_node
     if i == length - 1:
         ptr.next_node = Node(value, None)
-    
-    
+    elif i == 0:
+        node = Node(value, node)
+    else:
+        preptr.next_node = Node(value, None)
+        preptr.next_node.next_node = ptr
+
+
 def list_length(node: Node) -> int:
     ptr = node
     i = 0

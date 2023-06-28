@@ -82,7 +82,7 @@ class Square:
         """
         return self.__position
 
-    @position.getter
+    @position.setter
     def position(self, value):
         if len(self.__position) != 2 or type(self.__position[0]) is not int \
           or type(self.__position[1]) is not int:

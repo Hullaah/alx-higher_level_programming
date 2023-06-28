@@ -54,7 +54,7 @@ class Square:
     def __ge__(self, __value: object) -> bool:
         return self.area() >= __value.area()
 
-    def __ge__(self, __value: object) -> bool:
+    def __ne__(self, __value: object) -> bool:
         return self.area() != __value.area()
 
     @property

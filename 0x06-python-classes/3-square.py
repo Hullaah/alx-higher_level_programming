@@ -13,13 +13,13 @@ class Square:
     """The Square class object.
 
         It is a class that stores a private size
+        Attributes:
+            _size (int): private size attribute
     """
     def __init__(self, size=0):
         """
         Args:
             size (int): The size of the square
-        Attributes:
-            _size (int): private size attribute
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")

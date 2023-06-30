@@ -22,6 +22,8 @@ class Node:
         Args:
             data (int): Node data
             next_node (Node): next node
+        Attributes:
+        
         """
         if type(data) is not int:
             raise TypeError("data must be an integer")
@@ -73,6 +75,11 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """
+        Description: inserts a value into the list in a sorted manner
+        Args:
+            value
+        Return:
+            Empty (No return value)
         """
         ptr = self.__head
         i = 0
@@ -94,6 +101,15 @@ class SinglyLinkedList:
 
 
 def insert_node_at_index(node: Node, index: int, value: int) -> None:
+    """
+    Description: inserts a node into the linked linked list
+    Args:
+        node: linked list
+        index: index to insert node at
+        value: value to be given to node
+    Return:
+        the modified linked list
+    """
     i = 0
     preptr = ptr = node
     length = list_length(node)
@@ -117,6 +133,13 @@ def insert_node_at_index(node: Node, index: int, value: int) -> None:
 
 
 def list_length(node: Node) -> int:
+    """
+    Description: calculates the length of a linked list
+    Args:
+        node: the linked list
+    Return:
+        the linked list length
+    """
     ptr = node
     i = 0
     while ptr:

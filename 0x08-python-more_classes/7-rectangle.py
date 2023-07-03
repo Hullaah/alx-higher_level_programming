@@ -8,8 +8,6 @@ and demonstrate Object orinted programming in python
 
 
 class Rectangle:
-    number_of_instances = 0
-    print_symbol = "#"
     """
     This is an rectangle class created during the Alx software
     engineering course used to demonstrate object oriented
@@ -17,7 +15,12 @@ class Rectangle:
     Attributes:
         number_of_instances (int): count of the number of instaces
         instantiated from the class
+        print_symbol (Any): symbol to be used for string representation of
+        class
     """
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width: int = 0, height: int = 0):
         """initialises the class instances with the given arguments
         Args:

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """Singly linked list
+
 This module is part of the project done during the alx SE course.
 This module demonstrates the imnplementation of a singly linked
 list nodenext_node must be a Node object and a singly linked list
@@ -23,7 +24,7 @@ class Node:
             data (int): Node data
             next_node (Node): next node
         Attributes:
-        
+
         """
         if type(data) is not int:
             raise TypeError("data must be an integer")

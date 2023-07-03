@@ -8,10 +8,14 @@ and demonstrate Object orinted programming in python
 
 
 class Rectangle:
+    number_of_instances = 0
     """
     This is an rectangle class created during the Alx software
     engineering course used to demonstrate object oriented
     programming in python.
+    Attributes:
+        number_of_instances (int): count of the number of instaces
+        instantiated from the class
     """
     def __init__(self, width: int = 0, height: int = 0):
         """initialises the class instances with the given arguments
@@ -33,6 +37,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__width = width
         self.__height = height
+        self.__class__.number_of_instances += 1
 
     @property
     def width(self):
@@ -95,3 +100,7 @@ class Rectangle:
 
     def __repr__(self) -> str:
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self) -> None:
+        self.__class__.number_of_instances -= 1
+        print("Bye rectangle...")

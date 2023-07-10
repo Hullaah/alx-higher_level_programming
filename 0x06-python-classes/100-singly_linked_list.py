@@ -101,7 +101,7 @@ class SinglyLinkedList:
         return ret
 
 
-def insert_node_at_index(node: Node, index: int, value: int) -> None:
+def insert_node_at_index(node, index: int, value: int):
     """
     Description: inserts a node into the linked linked list
     Args:

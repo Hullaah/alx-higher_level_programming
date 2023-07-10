@@ -39,22 +39,22 @@ class Square:
         """
         return self.__size ** 2
 
-    def __eq__(self, __value: object) -> bool:
+    def __eq__(self, __value) -> bool:
         return self.area() == __value.area()
 
-    def __lt__(self, __value: object) -> bool:
+    def __lt__(self, __value) -> bool:
         return self.area() < __value.area()
 
-    def __le__(self, __value: object) -> bool:
+    def __le__(self, __value) -> bool:
         return self.area() <= __value.area()
 
-    def __gt__(self, __value: object) -> bool:
+    def __gt__(self, __value) -> bool:
         return self.area() > __value.area()
 
-    def __ge__(self, __value: object) -> bool:
+    def __ge__(self, __value) -> bool:
         return self.area() >= __value.area()
 
-    def __ne__(self, __value: object) -> bool:
+    def __ne__(self, __value) -> bool:
         return self.area() != __value.area()
 
     @property

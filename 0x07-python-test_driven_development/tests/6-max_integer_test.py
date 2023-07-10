@@ -12,6 +12,12 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty(self):
         result = max_integer([])
         self.assertEqual(result, None)
+    def test_one_element(self):
+        result = max_integer([1])
+        self.assertEqual(result, 1)
+    def test_middle_element(self):
+        result = max_integer([1, 2, 5, 3, 4])
+        self.assertEqual(result, 5)
 
 
 if __name__ == "__main__":

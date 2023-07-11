@@ -27,7 +27,7 @@ class BaseGeometry:
         Return: None
         Raises:
             TypeError: if value is not an integer
-            Valueerror: if value is <= 0
+            ValueError: if value is <= 0
         """
         if type(value) is not int:
             raise TypeError(str(name) + " must be an integer")

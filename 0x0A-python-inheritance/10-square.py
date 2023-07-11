@@ -66,6 +66,11 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    """
+    This is Square class created during the Alx software
+    engineering course used to demonstrate object oriented programming and
+    inheritance in python.
+    """
     def __init__(self, size: int) -> None:
         """
         Args:

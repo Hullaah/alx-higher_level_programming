@@ -7,18 +7,21 @@ that implements pascal's triangle
 
 
 def pascal_triangle(n: int) -> int:
+    """returns a list of lists of integers representing the Pascal’s triangle
+    of n
+    Args:
+        n: height of triangles
+    Return:
+        list of lists of integers representing the Pascal’s triangle of n
+    """
     ans = []
     if n <= 0:
         return []
     for i in range(n):
-        """if i == 0:
-            ans.append([1])
-        else:"""
         ans.append([int(combination(i, x)) for x in range(i + 1)])
     return ans
 
-        
-    
+
 def factorial(n: int) -> int:
     """Calculates the factorial of a number
     Args:
@@ -33,6 +36,7 @@ def factorial(n: int) -> int:
         ans *= i
     return ans
 
+
 def permutation(n: int, x: int) -> int:
     """Calculates the permuation of x in n
     Args:
@@ -42,6 +46,7 @@ def permutation(n: int, x: int) -> int:
         n! / (n - x)!
     """
     return factorial(n) / factorial(n - x)
+
 
 def combination(n: int, x: int) -> int:
     """Calculates the permuation of x in n

@@ -30,7 +30,7 @@ class Student:
         Return:
             dictionary representation of string
         """
-        if not attrs or any([type(i) is not str for i in attrs]):
+        if attrs is None or any([type(i) is not str for i in attrs]):
             return ({
                 "first_name": self.first_name,
                 "age": self.age,

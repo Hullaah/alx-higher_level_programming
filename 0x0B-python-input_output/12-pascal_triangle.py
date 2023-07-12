@@ -6,7 +6,7 @@ that implements pascal's triangle
 """
 
 
-def pascal_triangle(n: int) -> int:
+def pascal_triangle(n: int) -> list:
     """returns a list of lists of integers representing the Pascal’s triangle
     of n
     Args:
@@ -45,7 +45,7 @@ def permutation(n: int, x: int) -> int:
     Return:
         n! / (n - x)!
     """
-    return factorial(n) / factorial(n - x)
+    return factorial(n) // factorial(n - x)
 
 
 def combination(n: int, x: int) -> int:
@@ -56,4 +56,4 @@ def combination(n: int, x: int) -> int:
     Return:
         n! / (n - x)!x!
     """
-    return permutation(n, x) / factorial(x)
+    return permutation(n, x) // factorial(x)

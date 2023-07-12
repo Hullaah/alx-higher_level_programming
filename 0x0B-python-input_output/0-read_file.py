@@ -12,5 +12,5 @@ def read_file(filename: str = ""):
     Return:
         None
     """
-    with open(filename, encoding="UTF-8") as text_file:
-        print(text_file.read())
+    with open(filename, encoding="utf-8") as text_file:
+        print(text_file.read(), end="")

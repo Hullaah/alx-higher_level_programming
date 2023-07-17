@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "0x0A-python-inheritance"
+		},
+		{
+			"path": "0x0B-python-input_output"
+		},
+		{
+			"path": "0x0C-python-almost_a_circle"
+		},
+		{
+			"path": "0x00-python-hello_world"
+		},
+		{
+			"path": "0x01-python-if_else_loops_functions"
+		},
+		{
+			"path": "0x02-python-import_modules"
+		},
+		{
+			"path": "0x03-python-data_structures"
+		},
+		{
+			"path": "0x04-python-more_data_structures"
+		},
+		{
+			"path": "0x05-python-exceptions"
+		},
+		{
+			"path": "0x06-python-classes"
+		},
+		{
+			"path": "0x07-python-test_driven_development"
+		},
+		{
+			"path": "0x08-python-more_classes"
+		},
+		{
+			"path": "0x09-python-everything_is_object"
+		}
+	]
+}

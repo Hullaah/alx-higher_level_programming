@@ -1,47 +1,12 @@
-#!/usr/bin/node
-class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0) {
-      this.height = h;
-      this.width = w;
-    }
-  }
-
-  print () {
-    for (let i = this.height; i > 0; i--) {
-      let hash = '';
-      for (let j = this.width; j > 0; j--) {
-        hash += 'X';
-      }
-      console.log(hash);
-    }
-  }
-
-  rotate () {
-    const tmp = this.height;
-    this.height = this.width;
-    this.width = tmp;
-  }
-
-  double () {
-    this.height *= 2;
-    this.width *= 2;
-  }
-
-  charPrint (c) {
-    for (let i = this.height; i > 0; i--) {
-      let hash = '';
-      for (let j = this.width; j > 0; j--) {
-        hash += c || 'X';
-      }
-      console.log(hash);
-    }
-  }
-}
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-}
-module.exports = Square;
+#!/usr/bin/node 
+  
+ module.exports = class Square extends require('./5-square') { 
+   charPrint (c) { 
+     if (c === undefined) this.print(); 
+     else { 
+       for (let i = 0; i < this.height; i++) { 
+         console.log(c.repeat(this.width)); 
+       } 
+     } 
+   } 
+ };

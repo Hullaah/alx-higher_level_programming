@@ -5,3 +5,6 @@ while (!isNaN(x) && i !== x) {
   console.log('C is fun');
   i++;
 }
+if (isNaN(x)) {
+  console.log('Missing number of occurrences');
+}

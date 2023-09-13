@@ -1,7 +1,8 @@
 #!/usr/bin/node
-const languages = ['C is fun',
+const languages = [
+  'C is fun',
   'Python is cool',
-  'Javscript is amazing'
+  'JavaScript is amazing'
 ];
 for (const language of languages) {
   console.log(language);

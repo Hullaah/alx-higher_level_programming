@@ -19,12 +19,9 @@ def main():
 
     with Session(engine) as session:
         louisiana = State(name="Louisiana")
-        session.add_all([louisiana])
+        session.add(louisiana)
         session.commit()
-        states = session.query(State).order_by(State.id)
-        for state in states:
-            print(f"{state.id}: {state.name}")
-
+        print(louisiana.id)
 
 if __name__ == "__main__":
     main()

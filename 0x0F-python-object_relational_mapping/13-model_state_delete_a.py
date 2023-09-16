@@ -1,6 +1,7 @@
+#!.venv/bin/python
 #!/usr/bin/python3
-"""script that lists all State objects from the
-database hbtn_0e_6_usa
+""" a script that deletes all State objects with a name
+containing the letter a from the database hbtn_0e_6_usa
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
@@ -17,11 +18,10 @@ def main():
     engine = create_engine(connection_string)
 
     with Session(engine) as session:
-        louisiana = State(name="Louisiana")
-        session.add(louisiana)
-        session.commit()
-        print(louisiana.id)
-
+        states = session.query(State).filter(State.name.like("%a%"))
+        for state in states:
+            session.delete(state)
+            session.commit()
 
 if __name__ == "__main__":
     main()

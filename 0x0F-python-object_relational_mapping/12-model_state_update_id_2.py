@@ -18,10 +18,11 @@ def main():
     engine = create_engine(connection_string)
 
     with Session(engine) as session:
-        louisiana = State(name="Louisiana")
-        session.add(louisiana)
+        state_to_be_updated = session.query(
+            State).filter(State.id == 2).first()
+        state_to_be_updated.name = "New Mexico"
+        session.add(state_to_be_updated)
         session.commit()
-        print(louisiana.id)
 
 
 if __name__ == "__main__":

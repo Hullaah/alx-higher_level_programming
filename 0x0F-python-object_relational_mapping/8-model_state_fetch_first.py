@@ -15,7 +15,7 @@ def main():
     engine = create_engine(connection_string)
 
     with Session(engine) as session:
-        first = session.query(State).order_by(State.id).first()
+        first = session.query(State).first()
         print(f"{first.id}: {first.name}")
 
 

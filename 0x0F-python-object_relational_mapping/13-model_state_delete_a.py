@@ -1,4 +1,3 @@
-#!.venv/bin/python
 #!/usr/bin/python3
 """ a script that deletes all State objects with a name
 containing the letter a from the database hbtn_0e_6_usa
@@ -22,6 +21,7 @@ def main():
         for state in states:
             session.delete(state)
             session.commit()
+
 
 if __name__ == "__main__":
     main()

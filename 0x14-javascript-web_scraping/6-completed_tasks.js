@@ -6,7 +6,9 @@ request(url, (error, response, body) => {
   const todos = JSON.parse(body);
   const tasksCompleted = {};
   todos.forEach(element => {
-    tasksCompleted[element.userId] = (tasksCompleted[element.userId] ?? 0) + element.completed;
+    if (element.completed) {
+      tasksCompleted[element.userId] = (tasksCompleted[element.userId] ?? 0) + element.completed;
+    }
   });
   console.log(tasksCompleted);
 });
